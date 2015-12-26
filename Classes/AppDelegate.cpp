@@ -23,7 +23,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     pDirector->setOpenGLView(pEGLView);
 
     // run
-    pDirector->runWindow(RootWindow::create());
+    pDirector->runWindow(RootWindow::getInstance());
 
     return true;
 }

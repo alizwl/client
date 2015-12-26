@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "CrossApp.h"
+#include "CommonHttpManager.h"
 
 USING_NS_CC;
 
@@ -22,6 +23,15 @@ protected:
     
     void viewDidUnload();
     
+	void loginBtnCallBack(CAControl* btn, DPoint point);
+    
+    void onRequestLoginFinished(const HttpResponseStatus& status, const CSJson::Value& json);
+
+    
+private:
+
+	CATextField * m_pAccount;
+	CATextField * m_pPassword;
 };
 
 
